@@ -145,7 +145,7 @@ const TelaCadastro = () => {
         </Text>
         <TextInput
           onChangeText={(text) => (dadosCadastro.email = text)}
-          placeholder="Endereço *"
+          placeholder="Descrição"
           style={stylesCadastro.motivoInput}
         />
 
@@ -170,7 +170,8 @@ const TelaCadastro = () => {
           style={{
             fontSize: 23,
             color: "#000000",
-            alignSelf: "center"
+            alignSelf: "center",
+            marginBottom: config.deviceHeight*0.02
           }}
           onPress={voltarTelaLogin}>
           Já tenho uma conta
@@ -206,14 +207,12 @@ const stylesCadastro = StyleSheet.create({
     flex: 15,
     backgroundColor: "white",
     alignItems: "center",
-    borderTopRightRadius: 30,
-    borderTopLeftRadius: 30,
   },
   inputs:{
     borderWidth: 1.5,
     borderColor: "#6C0DBF",
     width: config.deviceWidth*0.85,
-    height: 40,
+    height: config.deviceHeight*0.056,
     borderRadius: 4,
     paddingLeft: 9,
     marginBottom: config.deviceHeight*0.02,
@@ -222,11 +221,11 @@ const stylesCadastro = StyleSheet.create({
     borderWidth: 1.5,
     borderColor: "#6C0DBF",
     width: config.deviceWidth*0.85,
-    height: 100,
+    height: config.deviceHeight*0.13,
     borderRadius: 4,
     paddingLeft: 9,
     marginBottom: config.deviceHeight*0.02,
-    textAlignVertical: "top"
+    textAlignVertical: "top",
   }
 });
 
