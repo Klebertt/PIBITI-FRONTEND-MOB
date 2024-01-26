@@ -59,6 +59,8 @@ const TelaCadastro = () => {
     
     <View style={stylesCadastro.container}>
       <View style={stylesCadastro.perfil}>
+      <Text style={{color: "#000000", fontSize: 16, alignSelf: "flex-end", marginRight: config.deviceWidth*0.04}}>
+        Pular</Text>
       <Text style={{color: "#6C0DBF", fontSize: 20}}>Cadastre-se</Text>
       <Icon name="user" size={100} color="black" />
       </View>
