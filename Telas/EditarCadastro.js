@@ -11,7 +11,7 @@ import axios from "axios";
 
 import { useNavigation } from '@react-navigation/native';
 
-const TelaCadastro = () => {
+const EditarCadastro = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const dadosCadastro = {
@@ -28,7 +28,7 @@ const TelaCadastro = () => {
     // navigation.goBack();
   };
 
-  async function criarConta() {
+  async function EditarDados() {
     setIsLoading(true); 
 
     if (dadosCadastro.senha !== dadosCadastro.repetirSenha) {
@@ -57,19 +57,19 @@ const TelaCadastro = () => {
   
   return (
     
-    <View style={stylesCadastro.container}>
-      <View style={stylesCadastro.perfil}>
+    <View style={stylesEdit.container}>
+      <View style={stylesEdit.perfil}>
       <Text style={{color: "#000000", fontSize: 16, alignSelf: "flex-end", marginRight: config.deviceWidth*0.04}}>
         Pular</Text>
-      <Text style={{color: "#6C0DBF", fontSize: 20}}>Cadastre-se</Text>
+      <Text style={{color: "#6C0DBF", fontSize: 20}}>Editar Dados</Text>
       <Icon name="user" size={100} color="black" />
       </View>
       {/* </View> */}
 
       <View
-        style={stylesCadastro.cadastro}
+        style={stylesEdit.cadastro}
       >
-        <ScrollView contentContainerStyle={stylesCadastro.scrollContainer}>
+        <ScrollView contentContainerStyle={stylesEdit.scrollContainer}>
         <Text
           style={{
             fontSize: 20,
@@ -84,28 +84,28 @@ const TelaCadastro = () => {
         <TextInput
           onChangeText={(text) => (dadosCadastro.nome = text)}
           placeholder="Nome *"
-          style={stylesCadastro.inputs}
+          style={stylesEdit.inputs}
         />
         <TextInput
           onChangeText={(text) => (dadosCadastro.email = text)}
           placeholder="Data de nascimento *"
-          style={stylesCadastro.inputs}
+          style={stylesEdit.inputs}
         />
 
         <TextInput
           onChangeText={(text) => (dadosCadastro.senha = text)}
           placeholder="Telefone *"
-          style={stylesCadastro.inputs}
+          style={stylesEdit.inputs}
         />
         <TextInput
           onChangeText={(text) => (dadosCadastro.repetirSenha = text)}
           placeholder="CPF *"
-          style={stylesCadastro.inputs}
+          style={stylesEdit.inputs}
         />
          <TextInput
           onChangeText={(text) => (dadosCadastro.repetirSenha = text)}
           placeholder="Nome da mãe *"
-          style={stylesCadastro.inputs}
+          style={stylesEdit.inputs}
         />
         <Text
           style={{
@@ -121,17 +121,17 @@ const TelaCadastro = () => {
         <TextInput
           onChangeText={(text) => (dadosCadastro.nome = text)}
           placeholder="Cidade"
-          style={stylesCadastro.inputs}
+          style={stylesEdit.inputs}
         />
         <TextInput
           onChangeText={(text) => (dadosCadastro.email = text)}
           placeholder="Bairro *"
-          style={stylesCadastro.inputs}
+          style={stylesEdit.inputs}
         />
         <TextInput
           onChangeText={(text) => (dadosCadastro.email = text)}
           placeholder="Endereço *"
-          style={stylesCadastro.inputs}
+          style={stylesEdit.inputs}
         />
 
         <Text
@@ -148,7 +148,7 @@ const TelaCadastro = () => {
         <TextInput
           onChangeText={(text) => (dadosCadastro.email = text)}
           placeholder="Descrição"
-          style={stylesCadastro.motivoInput}
+          style={stylesEdit.motivoInput}
         />
 
         <Button
@@ -161,23 +161,12 @@ const TelaCadastro = () => {
             alignSelf: "center"
           }}
           mode="contained"
-          onPress={() => criarConta()}
+          onPress={() => EditarDados()}
           disabled={isLoading} // Define o botão como inativo se isLoading for true
           loading={isLoading} // Adiciona um indicador de carregamento no botão se isLoading for true
         >
-          Criar Conta
+          Editar Dados
         </Button>
-
-        <Text
-          style={{
-            fontSize: 23,
-            color: "#000000",
-            alignSelf: "center",
-            marginBottom: config.deviceHeight*0.02
-          }}
-          onPress={voltarTelaLogin}>
-          Já tenho uma conta
-        </Text>
         </ScrollView>
       </View>
       <StatusBar style="auto" />
@@ -186,7 +175,7 @@ const TelaCadastro = () => {
   );
 };
 
-const stylesCadastro = StyleSheet.create({
+const stylesEdit = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
   },
@@ -231,4 +220,4 @@ const stylesCadastro = StyleSheet.create({
   }
 });
 
-export default TelaCadastro;
+export default EditarCadastro;

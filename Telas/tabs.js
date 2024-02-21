@@ -8,6 +8,7 @@ import {
   AntDesign,
   FontAwesome,
 } from "@expo/vector-icons";
+import EditarCadastro from "./EditarCadastro";
 
 const Tab = createBottomTabNavigator();
 
@@ -31,10 +32,10 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="TelaConfiguracoes"
-        component={TelaConfiguracoes}
+        name="EditarCadastro"
+        component={EditarCadastro}
         options={{
-          tabBarLabel: "Configuracoes",
+          tabBarLabel: "EditarCadastro",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="gear" color={color} size={size} />
           ),
