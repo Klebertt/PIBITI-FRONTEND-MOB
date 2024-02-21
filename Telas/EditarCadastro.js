@@ -59,8 +59,7 @@ const EditarCadastro = () => {
     
     <View style={stylesEdit.container}>
       <View style={stylesEdit.perfil}>
-      <Text style={{color: "#000000", fontSize: 16, alignSelf: "flex-end", marginRight: config.deviceWidth*0.04}}>
-        Pular</Text>
+      <Icon name="close" style={stylesEdit.iconX} />
       <Text style={{color: "#6C0DBF", fontSize: 20}}>Editar Dados</Text>
       <Icon name="user" size={100} color="black" />
       </View>
@@ -217,6 +216,12 @@ const stylesEdit = StyleSheet.create({
     paddingLeft: 9,
     marginBottom: config.deviceHeight*0.02,
     textAlignVertical: "top",
+  },
+  iconX:{
+    color: "#000000", 
+    fontSize: 20, 
+    alignSelf: "flex-end",
+    marginRight: config.deviceWidth*0.04
   }
 });
 

@@ -9,6 +9,7 @@ import {
   FontAwesome,
 } from "@expo/vector-icons";
 import EditarCadastro from "./EditarCadastro";
+import TelaBotaoPanico from "./TelaBotaoPanico";
 
 const Tab = createBottomTabNavigator();
 
@@ -22,8 +23,8 @@ function MyTabs() {
       }}
     >
       <Tab.Screen
-        name="TelaCadastro"
-        component={TelaCadastro}
+        name="TelaBotaoPanico"
+        component={TelaBotaoPanico}
         options={{
           tabBarLabel: "Cadastro",
           tabBarIcon: ({ color, size }) => (
@@ -32,10 +33,10 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="EditarCadastro"
-        component={EditarCadastro}
+        name="TelaBotaoPanico"
+        component={TelaBotaoPanico}
         options={{
-          tabBarLabel: "EditarCadastro",
+          tabBarLabel: "BotaoPanico",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="gear" color={color} size={size} />
           ),
