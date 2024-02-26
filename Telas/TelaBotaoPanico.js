@@ -1,6 +1,7 @@
-import React from 'react';
+import {React} from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import config from '../config';
+import { Ionicons, FontAwesome5, Feather } from '@expo/vector-icons';
 
 const TelaBotaoPanico = () => {
   return (
@@ -13,15 +14,18 @@ const TelaBotaoPanico = () => {
 
       {/* Segunda View (20% do espaço) */}
       <View style={[styles.view, { flex: 0.2, flexDirection: 'row', backgroundColor: '#D9D9D9' }]}>
-        <View style={styles.customSquare}>
+        <View style={styles.squareContainer}>
+        <Feather name="alert-octagon" size={40} color="#6C0DBF" />
           <Text style={styles.iconText}>Previna-se</Text>
         </View>
 
-        <View style={styles.customSquare}>
+        <View style={styles.squareContainer}>
+        <Feather name="smile" size={40} color="#6C0DBF" />
           <Text style={styles.iconText}>Área Educacional</Text>
         </View>
 
-        <View style={styles.customSquare}>
+        <View style={styles.squareContainer}>
+        <Feather name="map-pin" size={40} color="#6C0DBF" />
           <Text style={styles.iconText}>SEMUDH</Text>
         </View>
       </View>
@@ -29,14 +33,15 @@ const TelaBotaoPanico = () => {
       {/* Terceira View (Restante) */}
       <View style={[styles.view, { flex: 0.7, backgroundColor: 'white', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }]}>
         <View style={styles.circleContainer}>
-          {}
+          {<Feather name="bell" size={90} color="black" />}
         </View>
-        <View botaoFuncao></View>
+        <Text style={styles.botaoDescricao}>Pânico</Text>
         
 
         <View style={styles.smallCircleContainer}>
-          {}
+        {<Feather name="alert-triangle" size={50} color="black" />}
         </View>
+        <Text style={styles.smallBotaoDescricao}>Denúncia</Text>
       </View>
       <View style={styles.aviso}>
         <Text style={styles.avisoText}>USE COM RESPONSABILIDADE</Text>
@@ -64,8 +69,9 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginLeft: 'auto', // Move para a extremidade direita
     marginRight: 10,
+    color: "#6C0DBF"
   },
-  customSquare: {
+  squareContainer: {
     width: config.deviceWidth*0.27,
     height: config.deviceHeight*0.14,
     borderWidth: 1.3,
@@ -80,7 +86,7 @@ const styles = StyleSheet.create({
   iconText: {
     fontSize: 15,
     textAlign: 'center',
-    marginTop: config.deviceHeight*0.08
+    marginTop: config.deviceHeight*0.01
   },
   circleContainer: {
     width: config.deviceWidth * 0.5,
@@ -88,7 +94,7 @@ const styles = StyleSheet.create({
     borderRadius: config.deviceWidth * 0.25, // Metade da largura para criar um círculo
     borderWidth: 1,
     borderColor: '#6C0DBF',
-    marginBottom: config.deviceHeight * 0.07,
+    marginBottom: config.deviceHeight * 0.01,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: "#DEA4FF",
@@ -103,7 +109,6 @@ const styles = StyleSheet.create({
     borderRadius: config.deviceWidth * 0.25, // Metade da largura para criar um círculo
     borderWidth: 1,
     borderColor: '#6C0DBF',
-    marginBottom: config.deviceHeight * 0.07,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: "#DEA4FF",
@@ -126,6 +131,17 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: "#FFFFFF",
     fontSize: 16,
+  },
+  botaoDescricao:{
+    marginBottom: config.deviceWidth*0.1,
+    fontSize: 28,
+    fontWeight: 'bold'
+  },
+  smallBotaoDescricao:{
+    marginTop: config.deviceHeight*0.01,
+    marginBottom: config.deviceWidth*0.16,
+    fontSize: 22,
+    fontWeight: 'bold'
   },
 });
 
