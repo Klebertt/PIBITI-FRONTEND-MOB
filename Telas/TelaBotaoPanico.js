@@ -31,11 +31,17 @@ const TelaBotaoPanico = () => {
         <View style={styles.circleContainer}>
           {}
         </View>
+        <View botaoFuncao></View>
+        
 
-        <View style={styles.circleContainer}>
+        <View style={styles.smallCircleContainer}>
           {}
         </View>
       </View>
+      <View style={styles.aviso}>
+        <Text style={styles.avisoText}>USE COM RESPONSABILIDADE</Text>
+      </View>
+      
     </View>
   );
 };
@@ -77,17 +83,49 @@ const styles = StyleSheet.create({
     marginTop: config.deviceHeight*0.08
   },
   circleContainer: {
-    width: config.deviceWidth*0.5,
-    height: config.deviceHeight*0.2,
-    borderRadius: 100,
+    width: config.deviceWidth * 0.5,
+    height: config.deviceWidth * 0.5, // Tornando a altura igual à largura
+    borderRadius: config.deviceWidth * 0.25, // Metade da largura para criar um círculo
     borderWidth: 1,
-    borderColor: 'black',
-    marginBottom: config.deviceHeight*0.07,
+    borderColor: '#6C0DBF',
+    marginBottom: config.deviceHeight * 0.07,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: "#DEA4FF",
+    shadowColor: 'black',
+    shadowOpacity: 0.8,
+    elevation: 6,
+  },
+  smallCircleContainer:
+  {
+    width: config.deviceWidth * 0.32,
+    height: config.deviceWidth * 0.32, // Tornando a altura igual à largura
+    borderRadius: config.deviceWidth * 0.25, // Metade da largura para criar um círculo
+    borderWidth: 1,
+    borderColor: '#6C0DBF',
+    marginBottom: config.deviceHeight * 0.07,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: "#DEA4FF",
+    shadowColor: 'black',
+    shadowOpacity: 0.8,
+    elevation: 6,
   },
   circleIcon: {
     fontSize: 30,
+  },
+  aviso: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: '#6C0DBF',
+    padding: config.deviceHeight*0.022,
+  },
+  avisoText:{
+    textAlign: 'center',
+    color: "#FFFFFF",
+    fontSize: 16,
   },
 });
 
