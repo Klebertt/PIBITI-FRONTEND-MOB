@@ -15,22 +15,52 @@ const TelaViolentometro = () => {
         <Text style={styles.textosTerceiraView}>É possível estarem em um relacionamento abusivo e não perceber. Acredite, é mais comum do que se imagina! Essa aqui é uma ferramenta que vai te ajudar a reconhecer quando você ou alguém próximo estiver em perigo.</Text>
         <View style={styles.retangularView}>
           <View style={styles.colunaEsquerda}>
-            <Text style={styles.textosEsquerdaTopo}>FIQUE ATENTA!</Text>
-            <Text style={styles.textosEsquerdaTopo}>A violência está presente. Essas atitudes não são      legais e não vão diminuir!</Text>
+            <Text style={styles.textosEsquerda}>FIQUE ATENTA!</Text>
+            <Text style={styles.textosEsquerda}>A violência está presente. Essas atitudes não são</Text>
+            <Text style={styles.textosEsquerda}>legais e não vão diminuir!</Text>
           </View>
           <View style={styles.colunaDireita}>
-            <Text style={styles.textosEsquerdaBaixo}>Culpar                Ameaçar
-Controlar
-Proibir
-Humilhar em público
-Chatangear
-Diminuir a autoestima
-Ciúmes excessivos
-Mentir/enganar</Text>
-          </View>
+  <Text style={styles.textosColunaDireita}>Culpar</Text>
+  <Text style={styles.textosColunaDireita}>Ameaçar</Text>
+  <Text style={styles.textosColunaDireita}>Controlar</Text>
+  <Text style={styles.textosColunaDireita}>Proibir</Text>
+  <Text style={styles.textosColunaDireita}>Humilhar em público</Text>
+  <Text style={styles.textosColunaDireita}>Chatangear</Text>
+  <Text style={styles.textosColunaDireita}>Diminuir a autoestima</Text>
+  <Text style={styles.textosColunaDireita}>Ciúmes excessivos</Text>
+  <Text style={styles.textosColunaDireita}>Mentir/enganar</Text>
+</View>
         </View>
-        <View style={styles.retangularView2}></View>
-        <View style={styles.retangularView3}></View>
+        <View style={styles.retangularView2}>
+          <View style={styles.colunaEsquerda}>
+            <Text style={styles.textosEsquerda}>REAJA!</Text>
+            <Text style={styles.textosEsquerda}>Busque ajuda</Text>
+            <Text style={styles.textosEsquerda}>antes que seja</Text>
+            <Text style={styles.textosEsquerda}>tarde demais!</Text>
+          </View>
+          <View style={styles.colunaDireita}>
+  <Text style={styles.textosColunaDireita2}>Xingar</Text>
+  <Text style={styles.textosColunaDireita2}>Destruir objetos pessoais</Text>
+  <Text style={styles.textosColunaDireita2}>Empurrar</Text>
+  <Text style={styles.textosColunaDireita2}>Chutar</Text>
+  <Text style={styles.textosColunaDireita2}>Arranhar</Text>
+  <Text style={styles.textosColunaDireita2}>"Brincar" de bater</Text>
+</View></View>
+        <View style={styles.retangularView3}><View style={styles.colunaEsquerda}>
+            <Text style={styles.textosEsquerda}>REAJA!</Text>
+            <Text style={styles.textosEsquerda}>Sua vida corre </Text>
+            <Text style={styles.textosEsquerda}>perigo, busque</Text>
+            <Text style={styles.textosEsquerda}>ajuda </Text>
+            <Text style={styles.textosEsquerda}>imediatamente!</Text>
+          </View>
+          <View style={styles.colunaDireita}>
+  <Text style={styles.textosColunaDireita3} numberOfLines={1}>Manter em cárcere privado</Text>
+  <Text style={styles.textosColunaDireita3}>Ameaçar de morte</Text>
+  <Text style={styles.textosColunaDireita3}>Violentar sexualmente</Text>
+  <Text style={styles.textosColunaDireita3}>Mutilar</Text>
+  <Text style={styles.textosColunaDireita3}>Estrangular</Text>
+  <Text style={styles.textosColunaDireita3}>Causar lesão corporal grave</Text>
+</View></View>
       </View>
     </View>
   );
@@ -83,10 +113,10 @@ const styles = StyleSheet.create({
     shadowColor: 'black',
     shadowOpacity: 1,
     elevation: 6,
-    flexDirection: 'row', // Organiza os elementos em linha
+    flexDirection: 'row',
   },
   retangularView2: {
-    height: config.deviceWidth * 0.4,
+    height: config.deviceHeight * 0.20,
     backgroundColor: 'white',
     borderRadius: 10,
     margin: 10,
@@ -97,9 +127,10 @@ const styles = StyleSheet.create({
     shadowColor: 'black',
     shadowOpacity: 1,
     elevation: 6,
+    flexDirection: 'row',
   },
   retangularView3: {
-    height: config.deviceWidth * 0.4,
+    height: config.deviceHeight * 0.20,
     backgroundColor: 'white',
     borderRadius: 10,
     margin: 10,
@@ -110,24 +141,40 @@ const styles = StyleSheet.create({
     shadowColor: 'black',
     shadowOpacity: 1,
     elevation: 6,
+    flexDirection: 'row',
   },
   colunaEsquerda: {
-    flex: 1, // Expande para ocupar todo o espaço disponível na coluna
-    justifyContent: 'center', // Centraliza verticalmente
-    paddingLeft: 20, // Espaçamento à esquerda
+    flex: 1,
+    justifyContent: 'center',
+    paddingLeft: 20,
   },
   colunaDireita: {
-    flex: 1, // Expande para ocupar todo o espaço disponível na coluna
-    justifyContent: 'center', // Centraliza verticalmente
-    paddingRight: 20, // Espaçamento à direita
+    flex: 1,
+    marginBottom: 1,
+    paddingRight: 20,
+
+
   },
-  textosEsquerdaTopo: {
+  textosEsquerda: {
     textAlign: 'left',
     fontWeight: 'bold',
+    marginRight: 10
   },
-  textosEsquerdaBaixo: {
+  textosColunaDireita: {
     textAlign: 'left',
-    marginTop: 10, // Espaçamento superior
+    marginBottom: 1,
+    fontWeight: '600'
+  },
+  textosColunaDireita2: {
+    textAlign: 'left',
+    marginTop: config.deviceHeight*0.002,
+    fontWeight: '600'
+  },
+  textosColunaDireita3: {
+    textAlign: 'left',
+    marginTop: config.deviceHeight*0.002,
+    fontWeight: '600',
+    fontSize: config.deviceWidth*0.033,
   },
 });
 
